@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Air Pollution Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Eco-Air</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Suggestions</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input id="city" class="form-control me-2" type="search Place " placeholder="Search Place"
+            aria-label="Search Place">
+          <button class="btn btn-outline-success" type="submit" id="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <dev class="container">
+    <h1 class="my-4 text-center">Air Quality for <span id="cityName"></span></h1>
+    <main>
+      <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3 text-bg-primary border-primary">
+              <h4 class="my-0 fw-normal">AQI (Air Quality Index)</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title"><span id="overall_aqi"></span><small
+                  class="text-body-secondary fw-light"> ppm</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3 text-bg-primary border-primary">
+              <h4 class="my-0 fw-normal">CO concentration is</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title"><span id="CO"></span><small
+                  class="text-body-secondary fw-light"> ppm</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Consentration of NO2 is <span id="NO2"></span> ppm</li>
+                <li>Consentration of O3 is <span id="O3"></span> ppm</li>
+                <li>Consentration of SO2 is <span id="SO2"></span> ppm</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3 text-bg-primary border-primary">
+              <h4 class="my-0 fw-normal">PM10 Particulates</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title"> <span id="PM10"></span><small
+                  class="text-body-secondary fw-light"> μg/m³</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="text-bg-dark pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+              <div class="my-3 py-3">
+                <h2 class="display-5">What is Air Pollution ?</h2>
+                <p class="lead">Air pollution is the contamination of air by harmful substances that can have adverse
+                  effects on human health and the environment. These harmful substances can include a variety of
+                  chemicals, particles, and gases. Air pollution can cause respiratory problems, cardiovascular
+                  problems, cancer, and premature death. It can also damage the environment by causing acid rain,
+                  reducing visibility, and contributing to climate change.</p>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="bg-body-tertiary pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+              <div class="my-3 p-3">
+                <h2 class="display-5">Causes of Air Pollution</h2>
+                <p class="lead">
+                <ul>
+                  <li>Burning fossil fuels: The combustion of fossil fuels, such as coal, oil, and natural gas, releases
+                    a variety of harmful pollutants into the air, including NOx, SO2, CO, and PM.</li>
+                  <li>
+                    Industrial emissions: Industrial processes, such as manufacturing, refining, and power generation,
+                    release a variety of pollutants into the air.
+                  </li>
+                  <li>Transportation: Transportation emissions, from cars, trucks, buses, and airplanes, are a major
+                    source of air pollution, particularly in urban areas.</li>
+                </ul>
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
+        <div class="mx-auto my-5">
+          <h2 class="display-6 text-center mb-4">HOW TO PREVENT AIR POLLUTION</h2>
+          <p>
+            Air pollution poses a significant threat to our environment and human health. To combat this issue, a comprehensive approach is necessary, involving both individual actions and collective efforts.
+            
+            Individuals can play a vital role by reducing their reliance on fossil fuels, prioritizing public transportation or eco-friendly modes of commuting, and adopting energy-efficient practices at home. Maintaining vehicles properly and adopting eco-driving habits can also contribute to emission reduction.
+            
+            Supporting environmental policies, raising awareness about air pollution, and making informed consumer choices are crucial steps in promoting sustainable practices. Industries must implement pollution control measures and adopt cleaner technologies to reduce their environmental impact.
+            
+            Agricultural practices need to be revamped, with a focus on reducing the use of nitrogen-based fertilizers and adopting efficient livestock management techniques.
+            
+            By combining individual actions with collective efforts, we can effectively address air pollution, ensuring a cleaner and healthier environment for all.</p>
+        </div>
+      
+        <main class="p-3 p-md-4 m-md-3 text-center position-relative">
+          <h1>About Us</h1>
+          <p class="col-lg-8 mx-auto fs-5 text-muted">
+            The Objective of this website is to develop a service that provides
+      comprehensive and up-to-date information on Air Pollution, Its cause and Prevention
+          </p>
+          </div>
+        </div>
+      </main>
+  </dev>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
